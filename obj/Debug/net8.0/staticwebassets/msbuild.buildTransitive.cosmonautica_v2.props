@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/cosmonautica_v2.props" />
+</Project>
