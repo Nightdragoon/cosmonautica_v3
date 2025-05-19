@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<INasaRepo,NasaRepo>();
+builder.Services.AddTransient<INoradRepo,NoradRepo>();
+
 
 var app = builder.Build();
 

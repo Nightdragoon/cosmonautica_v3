@@ -1,0 +1,57 @@
+@model cosmonautica_v2.Dtos.SatelitesDto
+@{
+}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+
+<div class="container">
+    <div class="row">
+        @foreach (var sat in @Model.satelites)
+        {
+            <div class="col">
+                <div class="card border-primary" style="width: 18rem;">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">@sat.info.satname</li>
+                            <li class="list-group-item">@sat.info.satid</li>
+                            <li class="list-group-item">lat:@sat.positions[0].satlatitude.ToString(System.Globalization.CultureInfo.InvariantCulture)</li>
+                            <li class="list-group-item">long:@sat.positions[0].satlongitude.ToString(System.Globalization.CultureInfo.InvariantCulture)</li>
+                            <li class="list-group-item"><button onclick="satToMap(@sat.positions[0].satlatitude.ToString(System.Globalization.CultureInfo.InvariantCulture) , @sat.positions[0].satlongitude.ToString(System.Globalization.CultureInfo.InvariantCulture))" class="btn-success">ver en mapa</button></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <div class="row">
+        <div class="mt-4" id="map" style="height: 400px;"></div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        function satToMap(lat , long ){
+            console.log(lat + ' ' + long);
+            map.setView([lat, long]);
+            L.marker([lat, long]).addTo(map)
+                .openPopup();
+        }
+
+    </script>
+    
+    
+}

@@ -31,3 +31,4 @@
 /home/nightdragon/cosmonautica_v2/cosmonautica_v2/bin/Debug/net8.0/cosmonautica_v2.staticwebassets.endpoints.json
 /home/nightdragon/cosmonautica_v2/cosmonautica_v2/obj/Debug/net8.0/staticwebassets.build.endpoints.json
 /home/nightdragon/cosmonautica_v2/cosmonautica_v2/obj/Debug/net8.0/staticwebassets/msbuild.cosmonautica_v2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/home/nightdragon/cosmonautica_v2/cosmonautica_v2/obj/Debug/net8.0/cosmonautica_v2.sourcelink.json
