@@ -7,6 +7,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<INasaRepo,NasaRepo>();
 builder.Services.AddTransient<INoradRepo,NoradRepo>();
+builder.Services.AddTransient<IPlanetsRepo , PlanetsRepo>();
 
 
 var app = builder.Build();

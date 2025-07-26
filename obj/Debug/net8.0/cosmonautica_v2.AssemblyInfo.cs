@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cosmonautica_v2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09537dabe94f62f158ef6aa8f3c5dffb72e340e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aa0b1d389f55702c6f35449fd02cf1272fb5b36")]
 [assembly: System.Reflection.AssemblyProductAttribute("cosmonautica_v2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cosmonautica_v2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

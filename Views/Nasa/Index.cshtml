@@ -22,7 +22,7 @@
             @foreach (var foto in @Model.photos)
             {
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card " data-aos="zoom-in" data-aos-delay="100" style="width: 18rem;">
                         <img src="@foto.img_src" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">@foto.earth_date</h5>
@@ -40,6 +40,19 @@ else
     <div class="alert alert-danger" role="alert">
         el api de la nasa se encuentra un poco ocupada ahora
     </div>
+}
+
+@section Scripts
+{
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 }
 
 
